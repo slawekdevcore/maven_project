@@ -51,14 +51,13 @@
     			<artifactId>flyway-maven-plugin</artifactId>
     			<version>9.16.1</version>
     			<configuration>
-					<url>jdbc:mysql://192.168.56.12:3306/testdb2</url>
+					<url>jdbc:mysql://192.168.56.12:3306/testdb</url>
         			<user>root</user>
         			<password>toor</password>
-					<locations>
-                        <location>filesystem:src/test/resources/sql/migrations/*</location>
+					<locations>                       
+						<location>filesystem:src/main/resources/sql/migrations/V02</location>
 					</locations>
-					<table>test_schema_history_table</table>
-					<baselineOnMigrate>true</baselineOnMigrate>
+					<baselineOnMigrate>true</baselineOnMigrate>				
     			</configuration>		
 		  	</plugin>
 		</plugins>
